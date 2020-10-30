@@ -2,11 +2,11 @@ public class Pumpkin {
   private int x;
   private int y;
   private int xSpeed = 0;
-  private int bounceSpeed = 2;
-  private int gravity = 1;
+  private int bounceSpeed = int(random(10));
+  private float gravity = int(random(2));
   private int pumpkinColor;
   private int pumpkinSizePixels = 150;
-  private int glowingEyesColor = color(321 + random(15), 214 + random(15), random(255));
+  private int glowingEyesColor = color(321 + random(49), 214 + random(49), random(255));
   private int greenStemColor = #2EA22D;
 
   public Pumpkin( int x, int pumpkinColor ) {

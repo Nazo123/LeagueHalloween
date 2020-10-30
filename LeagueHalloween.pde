@@ -35,28 +35,31 @@ PImage sHouse;
 void setup() {
   // 2. Set the size of your sketch to at least 600, 400 using
   //    the size() method.
-  size(600,400);
+  size(1200,800);
   
   // 3. Pick a scary house and initialize it using loadImage,
   //    example: scaryHouse = loadImage("scaryHouse1.jpg");
   sHouse = loadImage("scaryHouse3.jpg");
   // 4. Resize your scary house to the window size using
   //    scaryHouse.resize(width, height);
-  sHouse.resize(600,400);
+  sHouse.resize(1200,800);
   
   
   // Pumpkin( x, pumpkinColor )
-  pumpkin1 = new Pumpkin(350, #E26238);
-    pumpkin2 = new Pumpkin(100, #E26438);
-    pumpkin3 = new Pumpkin(460, #E26433);
-      pumpkin4 = new Pumpkin(200, #E26138);
+  pumpkin1 = new Pumpkin(580, #E26238);
+    pumpkin2 = new Pumpkin(300, #E26438);
+    pumpkin3 = new Pumpkin(790, #E26433);
+      pumpkin4 = new Pumpkin(1030, #E26138);
   
   
   // Ghost( y, speed, flyingDirection )
   ghost1 = new Ghost(130, 9, "right");
     ghost2 = new Ghost(80, 12, "left");
+  ghost3 = new Ghost(400, 16, "right");
+ 
 
       ghost4 = new Ghost(250, 4, "right");
+  
   
   rainfall = new Rain();
   lightning = new Lightning();
@@ -84,7 +87,7 @@ void draw() {
   // 8. Call ghost1.draw() to draw a ghost.
   ghost1.draw();
   ghost2.draw();
-   
+   ghost3.draw();
   ghost4.draw();
   //    Make at least 2 more new ghosts to fly across the screen.
   //    To do this, create new ghost variables above the setup() method 
@@ -95,15 +98,14 @@ void draw() {
   rainfall.draw(#2BACDE);
   // 10. Display "Happy Halloween" somewhere on your display.
   //     *hint* you can use text(), textSize(), and fill()
-  textSize(60);
+  textSize(125);
   fill(#9B1113);
-  text("Happy Halloween",54,50);
-    text("Happy Halloween",56,51);
-      text("Happy Halloween",58,52);
-        text("Happy Halloween",60,53);
-        text("Happy Halloween",62,54);
-        
-  
+  text("Happy Halloween",78,100);
+    text("Happy Halloween",80,101);
+      text("Happy Halloween",82,102);
+        text("Happy Halloween",84,103);
+        text("Happy Halloween",86,104);
+   
   // 11. Call lightning.draw() to draw some lightning;
   //     Can you make lightning crash only when the mouse is pressed?
 
@@ -118,9 +120,9 @@ void draw() {
   
   
   
-  
-  
-  
+    spotlight.setPixelSize(5);
+  spotlight.setSpotlightSize(250);
+   spotlight.draw();
   
   
   // There are hidden spotlight and grayscale features in this
@@ -159,4 +161,27 @@ void drawGrayscale( boolean grayscaleEnabled ){
 }
 void mousePressed(){
     lightning.draw();
+         spotlight.draw();
+  
+}
+void keyPressed(){
+ if(key == 'a'){
+ pumpkin1.moveLeft(4);
+ pumpkin2.moveLeft(4);
+ pumpkin3.moveLeft(4);
+ pumpkin4.moveLeft(4);
+ 
+ }
+  if(key == 'd'){
+ pumpkin1.moveRight(4);
+ pumpkin2.moveRight(4);
+ pumpkin3.moveRight(4);
+ pumpkin4.moveRight(4);
+}
+  if(key == ' '){
+     pumpkin1.moveRight(0);
+ pumpkin2.moveRight(0);
+ pumpkin3.moveRight(0);
+ pumpkin4.moveRight(0);
+  }
 }

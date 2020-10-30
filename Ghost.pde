@@ -4,7 +4,7 @@ public class Ghost {
   private int x;
   private int y;
   private int speed = 5;
-  private int transparency = 125;
+  private int transparency = int(random(80))+40;
 
   public Ghost(int y, int speed, String direction) {
     ghostImg = loadImage( "ghost.png" );

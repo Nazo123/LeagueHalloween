@@ -1,7 +1,7 @@
 public class Spotlight {
   private ArrayList<Pixel> pixelList;
   private int pixelSize = 4;
-  private int spotlightSizePixels = 150;
+  private int spotlightSizePixels = 1500;
   private PImage darkness = null;
   private PGraphics spotlightMask = null;
 

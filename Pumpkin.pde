@@ -2,12 +2,12 @@ public class Pumpkin {
   private int x;
   private int y;
   private int xSpeed = 0;
-  private int bounceSpeed = 0;
+  private int bounceSpeed = 2;
   private int gravity = 1;
   private int pumpkinColor;
   private int pumpkinSizePixels = 150;
-  private int glowingEyesColor = color(240 + random(15), 240 + random(15), random(255));
-  private int greenStemColor = #2EA22C;
+  private int glowingEyesColor = color(321 + random(15), 214 + random(15), random(255));
+  private int greenStemColor = #2EA22D;
 
   public Pumpkin( int x, int pumpkinColor ) {
     this.x = x;

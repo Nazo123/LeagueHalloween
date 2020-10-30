@@ -3,7 +3,7 @@ Minim minim = new Minim(this);
 
 public class Rain {
   private static final int MAX_RAIN_DROPS = 1000;
-  private int amountOfRain = 350;
+  private int amountOfRain = 80;
   private AudioPlayer rainSounds = null;
   private ArrayList<Raindrop> drop = new ArrayList<Raindrop>(amountOfRain);
   private ArrayList<Splash> splash = new ArrayList<Splash>();
